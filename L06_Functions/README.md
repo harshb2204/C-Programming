@@ -10,3 +10,7 @@ The buffer is flushed (written to the terminal) in the following cases:
 2. When the buffer gets full
 3. When `fflush(stdout)` is explicitly called
 4. When the program ends
+
+fflush(stdout);
+This tells the system: “Flush (write) everything in the stdout buffer right now.”
+This issue doesn’t happen as often on Windows (especially with compilers like Turbo C or Code::Blocks) because stdout is often line-buffered or automatically flushed. But on Linux/UNIX (e.g., using gcc in the terminal or WSL), it’s more likely to appear.
