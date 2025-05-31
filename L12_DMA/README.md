@@ -18,7 +18,7 @@ int main() {
     }
 
     printf("What is your name?\n");
-    scanf("%31s", name); // Limit input to avoid buffer overflow
+    scanf("s", name); 
     printf("Hello %s\n", name);
 
     free(name); // Free the allocated memory
@@ -39,3 +39,4 @@ Dynamic Memory Allocation (DMA) allows you to allocate memory at runtime using f
 - We check if the allocation was successful.
 - We use `scanf` to read the user's name, limiting input to prevent buffer overflow.
 - After using the memory, we release it with `free(name)` to avoid memory leaks.
+- We dont use ampersand when using pointers in the scanf, the ampersand means we are sending the address not the value(works fine with regular variables) , when using pointers we get address of the pointer but we want the value
