@@ -24,5 +24,12 @@
         printf("Address = %d, value = %d\n", p+1, *(p+1));
         printf("Address = %d, value = %d\n", p0+1, *(p0+1));
 
+    // size of int: 4
+    // Address = 6422292, value = 1025
+    // size of char: 1
+    // Address = 6422292, value = 1
+    // Address = 6422296, value = 6422292
+    // Address = 6422293, value = 4
+
 
     }
